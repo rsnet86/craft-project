@@ -12,7 +12,7 @@ var dbPsql *sql.DB
 var redisClient *redis.Client
 
 const (
-	host     = "54.147.246.139"
+	host     = "tinyurl.ctlsr2ublpsl.us-east-1.rds.amazonaws.com"
 	port     = 5432
 	user     = "postgres"
 	password = "Rihansh#12"
@@ -40,7 +40,7 @@ func CreatePostgres() *sql.DB {
 
 func CreateRedis() *redis.Client {
 	redisClient = redis.NewClient(&redis.Options{
-		Addr:     "54.147.246.139:6379",
+		Addr:     "10.0.102.161:6379",
 		Password: "",
 		DB:       0,
 	})

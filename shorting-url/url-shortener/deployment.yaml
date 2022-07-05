@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: craft
+  name: craft
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: craft
+  template:
+    metadata:
+      labels:
+        app: craft
+    spec:
+      containers:
+      - image: public.ecr.aws/j6b7y4i5/tinyurl:craft-1
+        name: tinyurl
+        ports:
+        - containerPort: 8080
+
