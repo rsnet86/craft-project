@@ -15,7 +15,7 @@ spec:
         app: craft
     spec:
       containers:
-      - image: public.ecr.aws/j6b7y4i5/tinyurl:craft-1
+      - image: public.ecr.aws/j6b7y4i5/craft:v1.0.0
         name: tinyurl
         ports:
         - containerPort: 8080
